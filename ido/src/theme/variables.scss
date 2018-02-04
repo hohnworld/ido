@@ -35,12 +35,18 @@ $app-direction: ltr;
 
 $colors: (
   primary:    #488aff,
+//primary:    #FF535C,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222
 );
 
+// /*全局 css 更改 tab 切换样式*/ 
+// .mytabs .tab-button[aria-selected=true] .tab-button-icon{
+//   color: #f53d3d !important; }
+//   .mytabs .tab-button:hover:not(.disable-hover), .mytabs .tab-button[aria-selected=true]{
+//     color: #f53d3d !important; }
 
 // App iOS Variables
 // --------------------------------------------------
@@ -86,3 +92,22 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+//自定义css
+.mytabs .tab-button[aria-selected=false] .tab-button-icon{
+
+  //color: #ff535c !important;  /*优先级高*/
+  font-size: 3.5rem;
+}
+
+.mytabs .tab-button[aria-selected=true] .tab-button-icon{
+
+  color: #ff535c !important;  /*优先级高*/
+  font-size: 4rem;
+}
+
+.mytabs .tab-button:hover:not(.disable-hover), .mytabs .tab-button[aria-selected=true]{
+
+  color: #ff535c !important;  /*优先级高*/
+  font-size: 4rem;
+}
